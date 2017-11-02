@@ -62,6 +62,31 @@ function isEven(number) {
     return isEven(result);
 }
 
+function printMatrix(n, m) {
+    var line = "";
+    for (var j = 0; j < m; j++) {
+        line += "X";
+    }
+
+    for (var i = 0; i < n; i++) {
+        console.log(line);
+    }
+}
+
+function printSlope(n, m) {
+    var line = "";
+    
+    for (var y = 0; y < m; y++) {
+        for (var x = 0; x < n - y; x++) {
+            line += "X";
+        }
+        console.log(line);            
+    }
+}
+
+printMatrix(4, 5);
+printSlope(4, 5);
+
 console.log(power(2, 100));
 console.log(powerRecursive(2, 100));
 console.log(multiply(2, 10));
